@@ -1,0 +1,80 @@
+
+.main-screen {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #38B4FF;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    z-index: 1;
+}
+
+.siderbar {
+    position: relative;
+    display: flex;
+    justify-content: left;
+}
+
+.background-wallpaper {
+    position: fixed;
+    width: fit-content;
+    z-index: 0;
+}
+
+.image1 {
+    width: 100%; /* Adjust the width of the image */
+}
+
+.time-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    position: relative;
+    font-family: Space Grotesk;
+    font-weight: bold;
+    font-size: 190px;
+    color: black; 
+    z-index: 1;
+    justify-content: center;
+    letter-spacing: -8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to the time container */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+
+
+/* .meridiem {
+    position: relative;
+    font-family: Space Grotesk;
+    font-weight: bold;
+    font-size: 50px;
+    color: black; 
+    z-index: 1;
+    margin-top: 105px;
+} */
+

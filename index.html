@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>focal</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <!-- <script src="web.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Strike&family=Space+Grotesk:wght@300..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section>
+        <div class="main-screen">
+            <div class="background-wallpaper">
+                <img class="image1" src="images/gradient4.jpg">
+            </div>
+            <div class="time-container"> 
+                <div class="time" id="timeContainer">
+                    <span id="hrs">11</span>
+                    <span class="dot">:</span>
+                    <span id="min">49</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let timeContainer = document.getElementById("timeContainer");
+
+        let lastDate = new Date().getDate();
+        let lastMinutes = -1;
+
+        function updateTime() {
+            let currentTime = new Date();
+            let hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            let currentDate = currentTime.getDate();
+
+
+            if (currentDate !== lastDate) {
+                hrs.innerHTML = "00";
+                lastDate = currentDate; 
+            } else {
+                hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
+            }
+
+            hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
+
+            if (minutes !== lastMinutes) {
+                min.innerHTML = (minutes < 10 ? "0" : "") + minutes;
+
+
+                timeContainer.classList.add('fade-in');
+
+
+                setTimeout(function() {
+                    timeContainer.classList.remove('fade-in');
+                }, 1000); 
+
+                lastMinutes = minutes; 
+            }
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+</script>
+</body>
+</html>
