@@ -407,7 +407,7 @@ p {
     position: fixed;
     bottom: 25px; /* Adjust as needed */
     right: 25px; /* Adjust as needed */
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s ease-in-out;
 }
 
@@ -417,6 +417,7 @@ p {
     height: 30px; /* Adjust size as needed */
     background: none;
     text-decoration: none;
+    fill: #007bff;
 }
 
 .full-screen svg {
@@ -425,13 +426,6 @@ p {
     fill: #007bff; /* Adjust color as needed */
 }
 
-body:hover .todo-list {
-    opacity: 1;
-}
-
-body:hover .full-screen {
-    opacity: 1;
-}
 
 .selected .pic {
     border: 3px solid #E1E1E1;
@@ -508,7 +502,14 @@ body:hover .full-screen {
         right: 15px;
         opacity: 1;
     }
+
+    .full-screen a {
+        width: 1rem;
+        height: 1rem;
+    }
+
 }
+
 
 
 @media (min-width: 500px) and (max-width: 750px) {
