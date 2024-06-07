@@ -1,55 +1,95 @@
-
-.main-screen {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #38B4FF;
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
 }
+
+/* Basic body styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #ffffff;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Ensure full viewport height */
+html, body {
+    height: 100%;
+}
+
+/* Apply gradients to top and bottom */
+body:before, body:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%; /* Adjust as needed */
+    z-index: -1;
+}
+
+/* Main screen container */
+.main-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Other styles (you can add back additional styles as needed) */
+
 
 .header {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: left;
-    z-index: 1;
-}
-
-.siderbar {
-    position: relative;
-    display: flex;
-    justify-content: left;
+    height: 50px;
 }
 
 .background-wallpaper {
     position: fixed;
-    width: fit-content;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .image1 {
-    width: 100%; /* Adjust the width of the image */
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Ensure the image fills its container */
+    object-fit: cover; /* Cover the entire container without stretching */
 }
 
-.time-container {
-    position: fixed;
+
+/* Center the time-container-clock */
+.time-container-clock {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Set a lower z-index compared to the sidebar */
 }
 
-.time {
+
+.time-clock {
     position: relative;
-    font-family: Space Grotesk;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: bold;
     font-size: 190px;
     color: black; 
-    z-index: 1;
+    z-index: 0;
+    align-items: center;
     justify-content: center;
     letter-spacing: -8px;
 }
+
 
 @keyframes fadeIn {
     from {
@@ -60,21 +100,340 @@
     }
 }
 
-/* Apply the fade-in animation to the time container */
+
 .fade-in {
     animation: fadeIn 1.5s ease-out;
+}
+
+.todo-list {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 1.25rem; 
+    -webkit-user-select: none; 
+    user-select: none;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Hide the default checkbox */
+.check-container input {
+    opacity: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.check-container {
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+    margin-top: 5px;
+    right: 25px;   
+    margin-bottom: 1.25rem;
+    z-index: 4;
+}
+
+.line {
+    width: calc(100% - 8px);
+    height: 3px;
+    left: 4px;
+    background: rgb(58, 58, 58);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.line-indicator {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.check-container input:checked ~ .line-indicator {
+    transform: translateY(-50%);
+}
+
+.check-container {
+    transform: rotate(90deg);
+}
+
+
+.sidebar {
+    position: fixed;
+    width: fit-content;
+    justify-content: center;
+    z-index: 2;
+    left: -100px;
+    top: 0px;
+    visibility: hidden; 
+    opacity: 0;
+    transition: left 0.5s ease, visibility 0.3s, opacity 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.show-sidebar {
+    left: 0; 
+    visibility: visible;
+    opacity: 1;
 }
 
 
 
 
-/* .meridiem {
+/* Rectangle section */
+.rectangle {
+    justify-content: flex-start;
+    height: 100vh;
+    background: rgba(0, 0, 0);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Rectangle pseudo-element */
+.rectangle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent); /* Lower transparency */
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.sidebar-theme {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: fit-content;
+    height: 80vh;
+    padding-right: 20px;
+    margin-top: 80px;
+    border-right: solid;
+    border-right-color: #E1E1E1;
+}
+
+.theme-button {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    gap: 10px;
+}
+
+
+.pomodoro-theme, .timer-theme, .minimalist {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+
+.theme-button .pomodoro-theme:hover, .theme-button .timer-theme:hover, .theme-button .minimalist:hover {
+    background-color: #E1E1E1;
+    color: #2d2d2d;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.active-theme {
+    background-color: #E1E1E1; /* Example color */
+    color: #2d2d2d; /* Example color */
+    padding-left: 15px;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.theme-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 110px;
+}
+
+
+/* Name section */
+.name {
     position: relative;
-    font-family: Space Grotesk;
-    font-weight: bold;
-    font-size: 50px;
-    color: black; 
-    z-index: 1;
-    margin-top: 105px;
-} */
+    font-size: xx-large;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.check-container.move-top-right {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 840px;
+    z-index: 4;
+    
+    background: transparent;
+}
+
+.check-container.move-top-right:hover {
+    background: none;
+    transition: 0.3s ease-in-out;
+}
+
+
+.check-container.move-top-right .line {
+    background: #ede7e7;
+}
+
+.theme-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 110px;
+}
+
+.theme-set {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    justify-content: space-between;
+    row-gap: 25px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    padding-left: 25px;
+}
+
+.theme-pic {
+    display: flex;
+    gap: 15px;
+    background: transparent;
+    border-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-basis: calc(50% - 10px); /* Three themes per row, accounting for gaps */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.theme-pic img {
+    width: 250px;
+    cursor: pointer;
+}
+
+
+p {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.03375rem;
+    color: white;
+}
+
+.pic {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.theme-set {
+    max-height: 580px; /* Adjust the height as needed */
+    overflow-y: auto;
+    padding-right: 15px; /* Add some padding to avoid clipping the scrollbar */
+}
+
+/* Optional: Style the scrollbar */
+.theme-set::-webkit-scrollbar {
+    width: 5px;
+}
+
+.theme-set::-webkit-scrollbar-thumb {
+    background-color: #393939;
+    border-radius: 30px;
+}
+
+.theme-set::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    border-radius: 30px;
+}
+
+.theme-set::-webkit-scrollbar-track {
+    border-radius: 30px;
+}
+
+.theme-pic::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+    flex-basis: calc(50% - 20px);
+}
+
+/* Scale up the box */
+.theme-pic:hover {
+    transform: scale(1.03, 1.03);
+}
+
+
+.full-screen {
+    position: fixed;
+    bottom: 25px; /* Adjust as needed */
+    right: 25px; /* Adjust as needed */
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.full-screen a {
+    display: block;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    background: none;
+    text-decoration: none;
+}
+
+.full-screen svg {
+    width: 100%;
+    height: 100%;
+    fill: #007bff; /* Adjust color as needed */
+}
+
+body:hover .todo-list {
+    opacity: 1;
+}
+
+body:hover .full-screen {
+    opacity: 1;
+}
+
+.selected .pic {
+    border: 3px solid #E1E1E1;
+}
 

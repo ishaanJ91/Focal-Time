@@ -1,0 +1,195 @@
+
+.theme-background-aesthetic  .background-wallpaper{
+    background-image: url('https://cdn.dribbble.com/users/8386872/screenshots/16014015/media/8b1cdc863851d0eaed92d00c3884e70e.jpg?resize=1600x1200&vertical=center');
+}
+
+.theme-background-aesthetic .line {
+    background: #ede7e7;
+}
+
+
+.theme-background-aesthetic .check-container.move-top-right {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 840px;
+    z-index: 4;    
+}
+
+.theme-background-aesthetic .full-screen svg {
+    fill: #ede7e7;
+}
+
+/* ****************************************************************** */
+
+.theme-background-ambient .background-wallpaper {
+    background-image: url('https://i.pinimg.com/originals/a3/ad/e1/a3ade1e1051a31ff5d37fca5118d7678.jpg');
+}
+
+.theme-background-aesthetic .full-screen svg {
+    fill: #007bff; /* Adjust color as needed */
+}
+
+
+.theme-background-ambient .line {
+    background: rgb(58, 58, 58);
+}
+
+/* ****************************************************************** */
+
+.theme-background-aura .background-wallpaper {
+    background-image: url('images/gradient2-complete.png');
+}
+
+/* ****************************************************************** */
+
+.theme-background-squared .background-wallpaper {
+    width: 100%;
+    height: 100%;
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+                                      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+    display: flex;
+    z-index: -4;
+}
+
+
+/* ****************************************************************** */
+
+.theme-background-lofi1 .background-wallpaper {
+    background-image: url('https://64.media.tumblr.com/cb1a6d28f1f97fe56c0764cdf40fc92c/d662df3b2e19bcdc-c5/s1280x1920/4baa320331097d96bf9dbbc1277cfbe4b48f3920.gifv');
+    background-color: rgba(0, 0, 0, 0.381);
+    background-blend-mode: multiply;
+}
+
+.theme-background-lofi1 .time-clock {
+    color: white; /* Change the timer color to white */
+}
+
+.theme-background-lofi1 .line {
+    background: #ede7e7;
+}
+
+
+.theme-background-lofi1 .check-container.move-top-right {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 840px;
+    z-index: 4;
+    background:transparent;
+}
+
+
+.theme-background-lofi1 .full-screen svg {
+    fill: #ede7e7;
+}
+
+
+/* ****************************************************************** */
+
+
+
+.theme-background-lofi2 .background-wallpaper {
+    color: white;
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/029/320/295/original/bogdan-mb0sco-coffeeanim.gif?1601147277');
+    background-color: rgba(0, 0, 0, 0.32);
+    background-blend-mode: multiply;
+}
+
+.theme-background-lofi2 .time-clock {
+    color: rgb(219, 219, 219); /* Change the timer color to white */
+}
+
+.theme-background-lofi2 .line {
+    background: #ede7e7;
+}
+
+.theme-background-lofi2 .check-container.move-top-right {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 840px;
+    z-index: 4;
+    background: transparent;
+}
+
+
+.theme-background-lofi2 .full-screen svg {
+    fill: #ede7e7;
+}
+
+/* ****************************************************************** */
+
+
+
+.theme-background-lofi3 .background-wallpaper {
+    color: white;
+    background-image: url('https://i.pinimg.com/736x/4f/87/48/4f87486ef8cdba9412f99c7fad2ef8a7.jpg');
+    background-color: rgba(0, 0, 0, 0.107);
+    background-blend-mode: multiply;
+}
+
+.theme-background-lofi3 .time-clock {
+    color: rgb(219, 219, 219); /* Change the timer color to white */
+}
+
+.theme-background-lofi3 .line {
+    background: #3b3b3b;
+}
+
+.theme-background-lofi3 .check-container.move-top-right {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 840px;
+    z-index: 4;
+    background: transparent;
+}
+
+.theme-background-lofi3 .full-screen svg {
+    fill: #3b3b3b;
+}
+
+/* ****************************************************************** */
+
+.theme-background-lofi4 .background-wallpaper {
+    color: white;
+    background-image: url('https://i.pinimg.com/originals/fb/af/44/fbaf443c014bf40b95cfa35121572b25.gif');
+    background-color: rgba(0, 0, 0, 0.32);
+    background-blend-mode: multiply;
+}
+
+.theme-background-lofi4 .time-clock {
+    color: white; /* Change the timer color to white */
+}
+
+.theme-background-lofi4 .line {
+    background: #ede7e7;
+}
+
+
+.theme-background-lofi4 .check-container.move-top-right {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    left: 840px;
+    z-index: 4;
+}
+
+
+.theme-background-lofi4 .full-screen svg {
+    fill: #ede7e7;
+}
