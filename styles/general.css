@@ -593,8 +593,8 @@ body:hover .full-screen {
         flex-direction: column;
         width: fit-content;
         margin-top: 15px;
-        height: 16vh;
-        width: 60vw;
+        height: 18vh;
+        width: 45vw;
         border-right: none;
         border-bottom: solid;
         border-bottom-color: #E1E1E1;
