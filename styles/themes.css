@@ -7,17 +7,6 @@
     background: #ede7e7;
 }
 
-
-.theme-background-aesthetic .check-container.move-top-right {
-    display: flex;
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: 25px;
-    left: 840px;
-    z-index: 4;    
-}
-
 .theme-background-aesthetic .full-screen svg {
     fill: #ede7e7;
 }
@@ -29,7 +18,7 @@
 }
 
 .theme-background-aesthetic .full-screen svg {
-    fill: #007bff; /* Adjust color as needed */
+    fill: #ffffff; /* Adjust color as needed */
 }
 
 
@@ -75,18 +64,6 @@
 }
 
 
-.theme-background-lofi1 .check-container.move-top-right {
-    display: flex;
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: 25px;
-    left: 840px;
-    z-index: 4;
-    background:transparent;
-}
-
-
 .theme-background-lofi1 .full-screen svg {
     fill: #ede7e7;
 }
@@ -109,17 +86,6 @@
 
 .theme-background-lofi2 .line {
     background: #ede7e7;
-}
-
-.theme-background-lofi2 .check-container.move-top-right {
-    display: flex;
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: 25px;
-    left: 840px;
-    z-index: 4;
-    background: transparent;
 }
 
 
@@ -146,17 +112,6 @@
     background: #3b3b3b;
 }
 
-.theme-background-lofi3 .check-container.move-top-right {
-    display: flex;
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: 25px;
-    left: 840px;
-    z-index: 4;
-    background: transparent;
-}
-
 .theme-background-lofi3 .full-screen svg {
     fill: #3b3b3b;
 }
@@ -176,17 +131,6 @@
 
 .theme-background-lofi4 .line {
     background: #ede7e7;
-}
-
-
-.theme-background-lofi4 .check-container.move-top-right {
-    display: flex;
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    top: 25px;
-    left: 840px;
-    z-index: 4;
 }
 
 

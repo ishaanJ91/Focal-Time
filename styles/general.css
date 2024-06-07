@@ -235,7 +235,7 @@ body:before, body:after {
 }
 
 
-.pomodoro-theme, .timer-theme, .minimalist {
+.timer-theme{
     cursor: pointer;
     outline: none;
     border: none;
@@ -437,3 +437,202 @@ body:hover .full-screen {
     border: 3px solid #E1E1E1;
 }
 
+@media (min-width: 300px) and (max-width: 1200px) {
+
+    .time-clock {
+        font-size: 15.7vw; /* Adjust font size for smaller screens */
+        letter-spacing: -4px;
+    }
+
+    .check-container {
+        width: 20px;
+        height: 20px;
+    }
+
+    
+    .check-container.move-top-right {
+        display: flex;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        top: 25px;
+        left: 55 vw;
+        z-index: 4;
+        background: transparent;
+    }
+
+    .check-container.move-top-right:hover {
+        background: none;
+        transition: 0.3s ease-in-out;
+    }
+
+
+    .check-container.move-top-right .line {
+        background: #ede7e7;
+    }
+
+    .todo-list {
+        padding: 1rem;
+        opacity: 1;
+    }
+
+    .sidebar {
+        left: -80px; /* Adjust sidebar position */
+    }
+
+    .sidebar.show-sidebar {
+        left: 0;
+    }
+
+    .rectangle {
+        width: 60vw;
+    }
+
+
+    .theme-set {
+        width: 100%; /* Adjust width for smaller screens */
+        padding-left: 10px;
+    }
+
+    .theme-pic img {
+        width: 150px; /* Adjust image size for smaller screens */
+    }
+
+    .theme-pic {
+        flex-basis: calc(50% - 10px); /* Adjust flex-basis for smaller screens */
+        padding-left: 30px;
+    }
+
+    .full-screen {
+        bottom: 15px; /* Adjust position for smaller screens */
+        right: 15px;
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 750px) {
+
+    .rectangle {
+        width: 70vw;
+    }
+
+
+    .check-container.move-top-right {
+        display: flex;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        top: 25px;
+        left: 58vw;
+        z-index: 4;
+        background: transparent;
+    }
+
+
+
+    .sidebar-theme  {
+        width: 30vw;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .theme-button .timer-theme {
+        width: 70px;
+        font-size: 17px;
+    }
+
+    .theme-button {
+        margin-left: -20px;
+    }
+
+    p {
+        font-size: 1.04rem;
+    }
+
+    .theme-pic img {
+        width: 120px;
+    }
+
+    .theme-pic {
+        flex-basis: calc(50% - 10px); /* Adjust flex-basis for smaller screens */
+        padding-left: 10px;
+    }
+
+}
+
+
+@media (min-width: 300px) and (max-width: 500px) {
+
+    .rectangle {
+        width: 60vw;
+        justify-content: flex-start;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .check-container.move-top-right {
+        display: flex;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        top: 25px;
+        left: 43vw;
+        z-index: 4;
+        background: transparent;
+    }
+
+    .sidebar-theme  {
+        width: 30vw;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: fit-content;
+        margin-top: 15px;
+        height: 16vh;
+        width: 60vw;
+        border-right: none;
+        border-bottom: solid;
+        border-bottom-color: #E1E1E1;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .theme-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .theme-button .timer-theme {
+        width: 85px;
+        font-size: 1.3rem;
+    }
+
+    .theme-button {
+        margin-top: -12px;
+        margin-left: -5px;
+    }
+
+    p {
+        font-size: 1.04rem;
+    }
+
+    .theme-pic img {
+        width: 120px;
+    }
+
+    .theme-pic {
+        flex-basis: calc(50% - 10px); /* Adjust flex-basis for smaller screens */
+        padding-left: 30px;
+    }
+
+}
