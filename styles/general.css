@@ -44,7 +44,8 @@ body:before, body:after {
 
 .header {
     height: 50px;
-}
+} 
+
 
 .background-wallpaper {
     position: fixed;
